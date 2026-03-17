@@ -1,18 +1,13 @@
-/* Imports */
+/* ============================================
+   IMPORTS
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
-/*  CSS Reset Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif ;
-    font-weight: 400;
-    font-style: normal;
-}
 
-/* Brand Colors */ 
+ /* ============================================
+   DESIGN TOKENS  (:root variables)
+   ============================================ */
 :root {
     /* Layout */ 
     --header-height: 80px;
@@ -28,8 +23,23 @@
     --gray-200: #C2C3C2;
     --white-100: #FFFFFF;
 }
+/* ===========================================
+   RESET / BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif ;
+    font-weight: 400;
+    font-style: normal;
+}
 
-/* Global Styling */
+
+/* ===========================================
+   Global Styling
+   ============================================ */
+
 
 body {
     min-height: 100vh;
@@ -50,23 +60,44 @@ header {
     background-color: var(--black-800);
 }
 
-/* Navbar styling */
+/* ===========================================
+   Navbar Styling
+   ============================================ */
 
-.logo {
-    font-family: 'Jersey 10', serif;
-    font-size: 4rem;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0 32px 0 0;
+}
+
+nav a {
+    text-decoration: none;
     color: var(--white-100);
 }
 
- ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
- }
-
- a {
+.logo {
+    font-size: 4rem;
+    margin: 0 0 0 32px;
     text-decoration: none;
     color: var(--white-100);
+}
+
+/* ===========================================
+    Typography
+   ============================================ */
+ h1, h2, h3 {
+    font-family: 'Jersey 10';
+    font-weight: 700;
+    line-height: 1.2;
+ }
+
+ h1 { font-size: 18.75rem }
+ h2 { font-size: 11rem }
+ h3 { font-size: 8rem }
+
+ .display {
+    font-family: 'Jersey 10', serif;
  }
 
 
