@@ -47,15 +47,13 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 1;
+    background-color: var(--black-800);
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     position: fixed;
-
+    border-bottom: 1px solid var(--primary-300);
     color: var(--white-100);
     background-color: var(--black-800);
 }
@@ -63,12 +61,18 @@ header {
 /* ===========================================
    Navbar Styling
    ============================================ */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 40px;
+}
+
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 40px;
-    margin: 0 32px 0 0;
 }
 
 nav a {
@@ -78,7 +82,6 @@ nav a {
 
 .logo {
     font-size: 4rem;
-    margin: 0 0 0 32px;
     text-decoration: none;
     color: var(--white-100);
 }
@@ -86,25 +89,73 @@ nav a {
 /* ===========================================
     Typography
    ============================================ */
+   .display {
+      font-family: 'Jersey 10', serif;
+      text-align: center;
+   }
+
  h1, h2, h3 {
     font-family: 'Jersey 10';
     font-weight: 700;
-    line-height: 1.2;
+    color: var(--primary-100);
  }
 
- h1 { font-size: 18.75rem }
- h2 { font-size: 11rem }
+ h1 { font-size: 18rem }
+ h2 { font-size: 8rem }
  h3 { font-size: 8rem }
 
- .display {
-    font-family: 'Jersey 10', serif;
+ p {
+    color: var(--white-100);
  }
+
+ /* ===========================================
+    Layout Utilities 
+   ============================================ */
 
 
 main {
     width: 100%;
     margin-top: var(--header-height);
 }
+
+#hero-section {
+    width: 100%;
+}
+
+#hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-100);
+    background-image: url("/images/hero/hero.jpg");
+    background-size: cover;
+}
+
+.content-container {
+    margin: 96px 40px;
+}
+
+button {
+    width: 160px;
+    padding: 12px 8px;
+    border-radius: 24px;
+    margin: 16px;
+    
+}
+
+.primary-btn {
+    font-size: 1rem;
+    color: var(--white-100);
+    background-color: var(--black-800);
+}
+
+
+
+
+
+
 
 
 
