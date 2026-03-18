@@ -100,6 +100,13 @@ Typography
     color: var(--primary-100);
  }
 
+ h4 {
+    color: var(--white-100);
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+ }
+
  h1 { font-size: 18rem }
  h2 { font-size: 8rem }
  h3 { font-size: 8rem }
@@ -119,10 +126,12 @@ Layout Utilities
 main {
     width: 100%;
     margin-top: var(--header-height);
+    overflow: hidden;
 }
 
 section {
-    margin-bottom: 48px;
+    margin: 0 0 40px 48px;
+    
 }
 
 #hero-section {
@@ -140,10 +149,16 @@ section {
     background-size: cover;
 }
 
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
 .content-container {
     display: flex;
     gap: 64px;
-    margin: 96px 40px;
 }
 
 .contents {
@@ -180,16 +195,20 @@ img {
 
 form {
     display: flex;
+    gap: 8px;
     align-items: center;
-
 }
 
-input {
+input, textarea {
     width: 400px;
-    max-height: 48px;
     padding: 16px 24px;
     border-radius: 24px;
 }
+
+textarea {
+    height: 200px;
+}
+
 
 footer {
     display: flex;
@@ -200,6 +219,10 @@ footer {
 
 .social-link-container a {
     padding: 24px;
+}
+
+.cta-link {
+    margin-right: 40px;
 }
 
 button {
@@ -225,15 +248,26 @@ button {
 .lineup-container {
     display: flex;
     flex-direction: column;
-    margin: 0 40px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.subscribe-form {
+#subscribe-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 16px;
 }
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
 
 
 
