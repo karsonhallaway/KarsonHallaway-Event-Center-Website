@@ -24,7 +24,7 @@
 
     <main>
         <!-- Lineup Section-->
-        <section id="grid-container" class="content-section">
+        <section id="grid-container">
             <h3>Lineup</h3>
             <div class="sub-header">
                 <form class="search-form" action="/search" method="get">
@@ -33,9 +33,9 @@
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div class="filter-tags">
-                    <p class="tag">Artist</p>
-                    <p class="tag">Day</p>
-                    <p class="tag">Venue</p>
+                    <button class="tag">Artist</button>
+                    <button class="tag">Stage</button>
+                    <button class="tag">Venue</button>
                 </div>
                 <div class="icons">
                     <button class="icon-btn"><i class="fa-solid fa-grip"></i></button>
@@ -113,17 +113,19 @@
                     <p class="venue">Venue</p>
                     <p class="venue-address">1234 Broadway st, Denver, Co</p>
                 </div>
+                <p>see more</p>
             </div>
-            <p>see more</p>
         </section>
     </main>
     
     <footer>
         <div>
             <nav aria-label="Social media links">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <div class="social-link-container">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </nav>
         </div>
     </footer>

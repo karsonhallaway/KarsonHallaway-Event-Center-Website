@@ -25,7 +25,9 @@
     <main>
         <section class="content-section">
         <!-- Contact -->
-            <h3>Contact</h3>
+            <div class="contents">
+                <h3>Contact</h3>
+            </div>
             <h4>Send us an email</h4>
             <form id="contact-form" action="/submit-page" method="post">
                 <p>
@@ -40,7 +42,7 @@
                     <label for="message"></label>
                     <textarea name="message" placeholder="type message" ></textarea>
                 </p>
-                <button type="submit">Submit</button>
+                <button class="secondary-btn" type="submit">Submit</button>
             </form>
         </section>
     </main>
@@ -48,9 +50,11 @@
     <footer>
         <div>
             <nav aria-label="Social media links">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <div class="social-link-container">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </nav>
         </div>
     </footer>
