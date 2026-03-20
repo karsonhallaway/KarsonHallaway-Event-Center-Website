@@ -188,9 +188,9 @@ img {
     margin: 0 0 24px 16px;
 }
 
+/* Form Styling */
 form {
     display: flex;
-    gap: 8px;
     align-items: center;
 }
 
@@ -259,6 +259,7 @@ button {
 .lineup-container {
     display: flex;
     flex-direction: column;
+    margin-left: 40px;
     width: 100%;
     overflow: hidden;
 }
@@ -275,6 +276,7 @@ button {
 #contact-form {
     display: flex;
     flex-direction: column;
+    gap: 8px;
     width: 100%;
 }
 
@@ -285,11 +287,14 @@ button {
 
 .filter-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin: 0 40px 24px 0;
 }
 
 .filter-tags {
+    display: flex;
+    width: 100%;
     margin-left: 24px;
 }
 
@@ -317,7 +322,16 @@ i {
     font-size: 1.5rem;
 }
 
+.icons {
+    display: flex;
+}
+
 /* Table Grid */ 
+#grid-container {
+    margin-left: 40px;
+}
+
+
 .table-grid {
     color: var(--white-100);
     width: 100%;
@@ -345,8 +359,15 @@ td {
     padding: 4px 0 2px 8px 
 }
 
+/* Lineup */
+.search-form {
+    margin: 0 40px 24px 0;
+}
 
-
+.search-input {
+    width: 100%;
+    margin-right: 16px;
+}
 
 
 

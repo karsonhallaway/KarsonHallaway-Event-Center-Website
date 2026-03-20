@@ -29,17 +29,22 @@
             <div class="sub-header">
                 <form class="search-form" action="/search" method="get">
                     <label for="site-search"></label>
-                    <input type="search" id="site-search" name="q" placeholder="Search bands">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="search-input" type="search" id="site-search" name="q" placeholder="Search bands">
+                    <button class="icon-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-                <div class="filter-tags">
-                    <button class="tag">Artist</button>
-                    <button class="tag">Stage</button>
-                    <button class="tag">Venue</button>
-                </div>
-                <div class="icons">
-                    <button class="icon-btn"><i class="fa-solid fa-grip"></i></button>
-                    <button class="icon-btn"><i class="fa-solid fa-list"></i></button>
+                <div class="filter-container">
+                    <div class="icon-container">
+                        <button class="icon-btn"><i class="fa-solid fa-filter"></i></button>
+                    </div>
+                    <div class="filter-tags">
+                        <button class="tag">Artist</button>
+                        <button class="tag">Stage</button>
+                        <button class="tag">Venue</button>
+                    </div>
+                    <div class="icons">
+                        <button class="icon-btn"><i class="fa-solid fa-grip"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-list"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="card-grid">
