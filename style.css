@@ -188,7 +188,7 @@ img {
     flex-wrap: nowrap;
     gap: 8px;
     margin-bottom: 24px;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .card-grid {
@@ -299,8 +299,7 @@ button {
 .lineup-container {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    width: 100%;
+    margin: 0 40px;
     overflow: hidden;
 }
 
