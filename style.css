@@ -77,7 +77,6 @@ nav {
     margin: 0 40px  ;
 }
 
-
 nav ul {
     display: flex;
     list-style: none;
@@ -267,10 +266,12 @@ footer {
 }
 
 a {
+    display: inline-block;
     padding: 8px 16px;
 }
 
 a:hover {
+    scale: calc(1.2);
     color: var(--primary-100);
 }
 
@@ -279,7 +280,7 @@ a:hover {
 }
 
 .cta-link:hover {
-    color: var(--primary-100);
+    color: var(--gray-200);
     cursor: pointer;
 }
 
@@ -290,6 +291,7 @@ button {
 .primary-btn {
     width: 160px;
     padding: 12px 8px;
+    border: none;
     border-radius: 24px;
     margin: 16px;
     font-size: 1rem;
@@ -297,12 +299,24 @@ button {
     background-color: var(--black-800);
 }
 
+.primary-btn:hover {
+    color: var(--black-800);
+    background-color: var(--primary-100);
+}
+
 .secondary-btn {
     width: 160px;
     padding: 12px 8px;
+    border: 1px solid var(--black-800);
     border-radius: 24px;
     margin: 16px;
     font-size: 1rem;
+}
+
+.secondary-btn:hover {
+    color: var(--white-100);
+    background-color: var(--dark-gray-600);
+    border: 1px solid var(--primary-200);
 }
 
 
@@ -354,12 +368,17 @@ button {
 }
 
 .tag {
-    padding: 4px 12px;
+    font-weight: 500;
+    padding: 6px 12px;
     margin: 0 4px;
     background: none;
     border: 1px solid var(--gray-200);
-    color: var(--white-100);
+    color: var(--gray-200);
     border-radius: 16px;
+}
+
+.tag:hover {
+    background-color: var(--dark-gray-600);
 }
 
 .icon-container {
@@ -387,30 +406,34 @@ i {
 }
 
 
-.table-grid {
-    color: var(--white-100);
+table {
+    color: var(--gray-200);
     width: 100%;
-}
-
-thead {
-    background-color: var(--dark-gray-400);
-    color: var(--black-800);
+    border: 1px solid var(--dark-gray-400);
+    border-radius: 16px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
 }
 
 th {
     font-weight: bold;
 }
 
-tbody tr:nth-child(even) {
-    color: var(--black-800);
-    background-color: var(--gray-200);
+tr:nth-child(even) {
+    background-color: var(--dark-gray-800);
 }
 
 tr {
     height: 48px;
 }
 
+.row-select:hover {
+    background-color: var(--dark-gray-600);
+}
+
 td {
+    border: .5px solid var(--dark-gray-400);
     padding: 4px 0 2px 8px 
 }
 
