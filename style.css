@@ -151,7 +151,9 @@ main {
     align-items: center;
     text-align: center;
     color: var(--primary-100);
-    background-image: url("/images/hero/hero.jpg");
+    background-color: var(--dark-gray-600);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("/images/hero/hero.jpg");
     background-size: cover;
 }
 
@@ -276,11 +278,12 @@ a:hover {
 }
 
 .cta-link {
+    color: var(--gray-200);
     margin: 0 40px 40px 0;
 }
 
 .cta-link:hover {
-    color: var(--gray-200);
+    color: var(--white-100);
     cursor: pointer;
 }
 
@@ -291,7 +294,7 @@ button {
 .primary-btn {
     width: 160px;
     padding: 12px 8px;
-    border: none;
+    border: 1px solid var(--primary-100);
     border-radius: 24px;
     margin: 16px;
     font-size: 1rem;
