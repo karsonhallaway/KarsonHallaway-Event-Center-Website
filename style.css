@@ -51,6 +51,9 @@ Global Styling
 
 body {
     min-height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +61,7 @@ body {
 }
 
 header {
+    max-width: 1600px;
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -65,6 +69,7 @@ header {
     border-bottom: 1px solid var(--primary-300);
     color: var(--white-100);
     background-color: var(--black-800);
+    height: var(--header-height);
 }
 
 /* ===========================================
@@ -74,7 +79,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 40px  ;
+    margin: 0 40px;
+    height: var(--header-height);
 }
 
 nav ul {
@@ -92,6 +98,20 @@ nav a {
     font-size: 3rem;
     text-decoration: none;
     color: var(--white-100);
+}
+
+.bars-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Hamburger Styles */
+.menu-toggle {
+    color: var(--white-100);
+    font-size: var(--body-md);
+    padding: 8px 16px;
+    cursor: pointer;
+    display: none; /* Hiddent by default unless we are on mobile */
 }
 
 /* ===========================================
@@ -115,7 +135,7 @@ h4 {
     width: 100%;
 }
 
-h1 { font-size: 18rem }
+h1 { font-size: 16rem }
 h2 { font-size: 8rem }
 h3 { font-size: 8rem }
 
@@ -476,14 +496,43 @@ iframe {
     border: 1px solid var(--dark-gray-400);
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     h1 { font-size: 8rem; }
     h2 { font-size: 4rem; }
     h3 { font-size: 4rem; }
 
     .card-container {
         flex-wrap: wrap;
-        justify-content: space-between;
+    }
+
+    /* show hamburger menu */
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+
+        height: var(--header-height);
+        align-items: center;
+    }
+
+    /* hide menu */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        background-color: var(--black-800);
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+    }
+
+    /* Show menu when class is active */
+    .menu.active {
+        display: flex
+    }
+
+    ul {
+        align-items: center;
     }
 }
 
