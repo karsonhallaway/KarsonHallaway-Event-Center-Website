@@ -197,7 +197,6 @@ main {
 
 .img-container {
     margin-top: 40px;
-    width: 50%;
 }
 
 img {
@@ -219,7 +218,7 @@ img {
 
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 8px;
     row-gap: 32px;
 }
@@ -410,9 +409,9 @@ button {
 
 .icon-btn {
     border: none;
+    background-color: var(--black-800);
     color: var(--white-100);
     width: 48px;
-    background: none;
 }
 
 i {
@@ -426,12 +425,14 @@ i {
 /* Table Grid */ 
 #grid-container {
     margin: 0 40px 0 40px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
 table {
     color: var(--gray-200);
     width: 100%;
+    height: 100vh;
     border: 1px solid var(--dark-gray-400);
     border-radius: 16px;
     border-collapse: separate;
@@ -456,8 +457,23 @@ tr {
 }
 
 td {
+    padding: 8px;
     border: .5px solid var(--dark-gray-400);
-    padding: 4px 0 2px 8px 
+}
+
+.row-expand {
+    display: none;
+}
+
+.row-expand.active  {
+    vertical-align: bottom;
+    text-align: left;
+    height: 400px;
+    display: table-row;
+    background-color: var(--black-800);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("/images/artist/artist1.jpg");
+
 }
 
 /* Lineup */
@@ -496,10 +512,15 @@ iframe {
     border: 1px solid var(--dark-gray-400);
 }
 
+/* Tablet Styling */
 @media only screen and (max-width: 768px) {
     h1 { font-size: 8rem; }
     h2 { font-size: 4rem; }
     h3 { font-size: 4rem; }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .card-container {
         flex-wrap: wrap;
@@ -536,7 +557,57 @@ iframe {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    h1 { font-size: 6rem; }
+    h2 { font-size: 4rem; }
+    h3 { font-size: 2rem; }
 
+    nav {
+        margin: 0 32px;
+    }
+
+    #hero-container {
+        margin-bottom: 32px;
+    }
+
+    .content-container {
+        gap: 24px;
+        align-items: start;
+        margin: 32px 32px 40px 32px;
+    }
+
+    .lineup-container {
+        margin: 0 32px 40px 32px;
+    }
+
+    .lineup-card {
+        width: 200px;
+        height: 500px;
+    }
+
+    .grid-container {
+        margin: 0 32px 40px 32px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contents {
+        gap: 16px;
+        min-width: 200px;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    .img-container {
+        margin-top: 0px;
+    }
+
+
+}
 
 
 

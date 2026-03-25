@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d9931e63d.js" crossorigin="anonymous"></script>
     <title>schedule</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -47,11 +48,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="row-select">
+                    <tr class="row-select" onclick="toggleRow(this)">
                         <td>Nova Waves</td>
                         <td>Main Stage</td>
                         <td>6:00 PM</td>
                         <td>Friday</td>
+                        <tr class="row-expand">
+                            <td colspan="4">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores tempora quaerat asperiores voluptatibus dolorum impedit nostrum est voluptatum odio, fugit a fugiat tempore omnis, et laboriosam eaque ut eveniet! Quos cupiditate non iure neque distinctio assumenda, nam repellat porro necessitatibus magnam repudiandae voluptates quaerat eveniet vel officia! Explicabo, quos molestiae.</p>
+                            </td>
+                        </tr>
                     </tr>
                     <tr class="row-select">
                         <td>The Relic Band</td>
@@ -97,6 +103,13 @@
         function toggleMenu() {
             const menu = document.getElementById("menu");
             menu.classList.toggle("active");
+        }
+        function toggleRow(row) {
+            row.nextElementSibling.classList.toggle("active");
+        }
+
+        function toggleRowOff(row) {
+            rwo.nextElementSibling.classList.toggle("hidden")
         }
     </script>   
 </body>
